@@ -8,11 +8,14 @@ class Cotizacion extends Model
 {
     protected $table='cotizaciones';
     protected $primaryKey='idcotizacion';
-    public $timestamps=false;
+    public $timestamps=true;
 
     protected $fillable= [
     	'idcte',
-    	'total'
+    	'total',
+    	'created_at',
+    	'estado',
+    	'updated_at'
     ];
 
     protected $guarded =[

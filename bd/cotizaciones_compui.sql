@@ -24,11 +24,12 @@ constraint fkcte FOREIGN KEY (idcte) REFERENCES clientes(idcte)
 );
 
 CREATE TABLE detallecot(
+iddetalle int not null,
 idcotizacion int not null,
 idprod int not null,
 cantidad int,
 importe numeric(12,2),
-CONSTRAINT pkdetalle PRIMARY KEY (idcotizacion, idprod),
+CONSTRAINT pkdetalle PRIMARY KEY (iddetalle),
 CONSTRAINT fkcot FOREIGN KEY(idcotizacion)  REFERENCES cotizaciones(idcotizacion),
 CONSTRAINT fkprod FOREIGN KEY(idprod) REFERENCES productos(idprod)
 );
