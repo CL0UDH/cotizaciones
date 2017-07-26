@@ -28,7 +28,8 @@ class ClienteFormRequest extends FormRequest
             'nombre'=>'required|max:80',
             'domicilio'=>'max:80',
             'telefono'=>'required|max:15',
-            'email'=>'required|max:80'
+            'email'=>'required|max:80',
+            'empresa'=>'max:80'
         ];
     }
 }

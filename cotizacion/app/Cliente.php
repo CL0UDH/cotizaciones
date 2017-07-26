@@ -15,7 +15,8 @@ class Cliente extends Model
     	'nomcte',
         'domicilio',
     	'telefono',
-        'email'
+        'email',
+        'empresa'
     ];
 
     protected $guarded =[

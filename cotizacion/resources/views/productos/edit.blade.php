@@ -35,12 +35,20 @@
 		{!!Form::model($producto,['method'=>'PATCH','route'=>['productos.update',$producto->idprod]])!!}
 		{{Form::token()}}
 		<div class="form-group">
+			<label for="modelo">Marca/Modelo</label>
+			<input type="text" name="modelo" class="form-control" value="{{$producto->modelo}}" placeholder="Marca/Modelo">
+		</div>
+		<div class="form-group">
 			<label for="nombre">Nombre</label>
 			<input type="text" name="nombre" class="form-control" value="{{$producto->nomprod}}" placeholder="Nombre">
 		</div>
 		<div class="form-group">
-			<label for="precio">Precio</label>
-			<input type="text" name="precio" class="form-control" value="{{$producto->precio}}" placeholder="Precio">
+			<label for="imagen">URL de la imagen</label>
+			<input type="text" name="imagen" class="form-control" value="{{$producto->imagen}}" placeholder="Imagen">
+		</div>
+		<div class="form-group">
+			<label for="ficha_tec">URL de la ficha técnica</label>
+			<input type="text" name="ficha_tec" class="form-control" value="{{$producto->ficha_tec}}" placeholder="Ficha técnica">
 		</div>
 		<div class="form-group">
 			<button class="btn btn-primary" type="submit">Guardar</button>

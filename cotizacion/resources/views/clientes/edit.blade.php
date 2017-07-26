@@ -35,6 +35,10 @@
 		{!!Form::model($cliente,['method'=>'PATCH','route'=>['clientes.update',$cliente->idcte]])!!}
 		{{Form::token()}}
 		<div class="form-group">
+			<label for="empresa">Empresa</label>
+			<input type="text" name="empresa" class="form-control" value="{{$cliente->empresa}}" placeholder="Empresa">
+		</div>
+		<div class="form-group">
 			<label for="nombre">Nombre</label>
 			<input type="text" name="nombre" class="form-control" value="{{$cliente->nomcte}}" placeholder="Nombre">
 		</div>

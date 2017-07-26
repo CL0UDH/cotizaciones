@@ -32,7 +32,8 @@
 			<table class="table table-striped table-bordered table-condensed table-hover">
 				<thead>
 					<th>Id</th>
-					<th>Nombre</th>
+					<th>Empresa</th>
+					<th>Nombre de contacto</th>
 					<th>Domicilio</th>
 					<th>Telefono</th>
 					<th>Email</th>
@@ -41,6 +42,7 @@
 				@foreach ($clientes as $cte)
 				<tr>
 					<td>{{$cte->idcte}}</td>
+					<td>{{$cte->empresa}}</td>
 					<td>{{$cte->nomcte}}</td>
 					<td>{{$cte->domicilio}}</td>
 					<td>{{$cte->telefono}}</td>

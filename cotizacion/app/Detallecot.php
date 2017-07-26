@@ -15,8 +15,7 @@ class Detallecot extends Model
     	'idcotizacion',
     	'idprod',
     	'cantidad',
-    	'importe',
-        'estado',
+        'precio'
     ];
 
     protected $guarded =[

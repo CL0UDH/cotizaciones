@@ -13,8 +13,10 @@ class Producto extends Model
 
     protected $fillable= [
     	'nomprod',
-    	'precio',
-    	'estado'
+    	'estado',
+        'modelo',
+        'imagen',
+        'ficha_tec'
     ];
 
     protected $guarded =[

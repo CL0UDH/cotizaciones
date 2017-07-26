@@ -35,8 +35,10 @@ class ProductoController extends Controller
 
     public function store(ProductoFormRequest $request){
     	$producto=new Producto;
+        $producto->modelo=$request->get('modelo');
     	$producto->nomprod=$request->get('nombre');
-        $producto->precio=$request->get('precio');
+        $producto->imagen=$request->get('imagen');
+        $producto->ficha_tec=$request->get('ficha_tec');
     	$producto->estado='1';
     	$producto->save();
     	return Redirect::to('productos');
@@ -52,8 +54,10 @@ class ProductoController extends Controller
 
     public  function update(ProductoFormRequest $request, $id){
     	$producto=Producto::findOrFail($id);
+        $producto->modelo=$request->get('modelo');
     	$producto->nomprod=$request->get('nombre');
-        $producto->precio=$request->get('precio');
+        $producto->imagen=$request->get('imagen');
+        $producto->ficha_tec=$request->get('ficha_tec');
     	$producto->update();
     	return Redirect::to('productos');
     }

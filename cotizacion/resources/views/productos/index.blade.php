@@ -32,15 +32,19 @@
 			<table class="table table-striped table-bordered table-condensed table-hover">
 				<thead>
 					<th>Id</th>
-					<th>Nombre</th>
-					<th>Precio</th>
+					<th>Marca/Modelo</th>
+					<th>Producto/Descripción</th>
+					<th>Imagen</th>
+					<th>Ficha técnica</th>
 					<th>Opciones</th>
 				</thead>
 				@foreach ($productos as $prod)
 				<tr>
 					<td>{{$prod->idprod}}</td>
-					<td>{{$prod->nomprod}}</td>
-					<td>{{$prod->precio}}</td>
+					<td>{{$prod->modelo}}</td>
+					<td height="100px" width="400px">{{$prod->nomprod}}</td>
+					<td><img src="{{$prod->imagen}}" alt="imagen" height="100px" width="100px" class="img-thumbnail"></td>
+					<td><a href="{{$prod->ficha_tec}}" target="_blank"><button class="btn btn-warning">Ver</button></a></td>
 					<td>
 						<a href="{{URL::action('ProductoController@edit',$prod->idprod)}}"><button class="btn btn-info">Editar</button></a>
 						<a href="" data-target="#modal-delete-{{$prod->idprod}}" data-toggle="modal"><button class="btn btn-danger">Eliminar</button></a>

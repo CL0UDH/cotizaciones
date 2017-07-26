@@ -35,6 +35,7 @@ class ClienteController extends Controller
 
     public function store(ClienteFormRequest $request){
     	$cliente=new Cliente;
+        $cliente->empresa=$request->get('empresa');
     	$cliente->nomcte=$request->get('nombre');
         $cliente->domicilio=$request->get('domicilio');
         $cliente->telefono=$request->get('telefono');
@@ -54,6 +55,7 @@ class ClienteController extends Controller
 
     public  function update(ClienteFormRequest $request, $id){
     	$cliente=Cliente::findOrFail($id);
+        $cliente->empresa=$request->get('empresa');
     	$cliente->nomcte=$request->get('nombre');
         $cliente->domicilio=$request->get('domicilio');
         $cliente->telefono=$request->get('telefono');

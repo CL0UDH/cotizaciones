@@ -26,7 +26,9 @@ class CotizacionFormRequest extends FormRequest
         return [
             //
             'idcte'=>'required',
-            'total'=>'max:15',
+            'idprod'=>'required',
+            'cantidad'=>'required',
+            'precio'=>'required'
         ];
     }
 }

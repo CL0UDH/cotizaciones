@@ -12,7 +12,6 @@ class Cotizacion extends Model
 
     protected $fillable= [
     	'idcte',
-    	'total',
     	'created_at',
     	'estado',
     	'updated_at'

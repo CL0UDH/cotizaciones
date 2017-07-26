@@ -24,8 +24,10 @@ class ProductoFormRequest extends FormRequest
     public function rules()
     {
         return [
-            'nombre'=>'required|max:80',
-            'precio'=>'required|max:15',
+            'nombre'=>'required|max:512',
+            'modelo'=>'required|max:80',
+            'imagen'=>'max:255',
+            'ficha_tec'=>'max:255'
         ];
     }
 }

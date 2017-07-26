@@ -35,6 +35,10 @@
 		{!!Form::open(array('url'=>'clientes','method'=>'POST','autocomplete'=>'off','enctype'=>'multipart/form-data'))!!}
 		{{Form::token()}}
 		<div class="form-group">
+			<label for="empresa">Empresa</label>
+			<input type="text" name="empresa" class="form-control" placeholder="Empresa">
+		</div>
+		<div class="form-group">
 			<label for="nombre">Nombre</label>
 			<input type="text" name="nombre" class="form-control" placeholder="Nombre">
 		</div>					
@@ -43,7 +47,7 @@
 			<input type="text" name="domicilio" class="form-control" placeholder="Aleman 203, Col. Las Fuentes, Celaya, Gto.">
 		</div>
 		<div class="form-group">
-			<label for="telefono">Telefono</label>
+			<label for="telefono">Teléfono</label>
 			<input type="text" name="telefono" class="form-control" placeholder="(461) 111 2222">
 		</div>
         <div class="form-group">
