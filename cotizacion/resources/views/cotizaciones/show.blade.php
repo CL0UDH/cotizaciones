@@ -1,6 +1,22 @@
 @extends ('layouts.admin')
 @section ('contenido')
-
+<!-- Page Heading -->
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">
+            Cotizaciones
+        </h1>
+        <ol class="breadcrumb">
+            <li class="active">
+                <i class="glyphicon fa-fw glyphicon-folder-open"></i>  <a href="{{url('cotizaciones')}}"> Cotizaciones</a>
+            </li>
+            <li class="active">
+                <i class="fa fa-file"> Detalle</i>
+            </li>
+        </ol>
+    </div>
+</div>
+<!-- /.row -->
 	<div class="row">
 		<vid class="col-lg-6 col-sm-6 col-md-6 col-xs-6">
 			<div class="form-group">
@@ -69,9 +85,8 @@
 							<th></th>
 							<th></th>
 							<th></th>
-							<th></th>
-							<th></th>
-							<th><h4 id="total">{{$cotizacion->total}}</h4></th>
+							<th>Total</th>
+							<th><h4 id="total">${{$cotizacion->total}}</h4></th>
 						</tfoot>
 						<tbody>
 							@foreach($detalles as $det)
@@ -81,8 +96,8 @@
 								<td height="100px" width="400px">{{$det->producto}}</td>
 								<td>{{$det->cantidad}}</td>
 								<td><a href="{{$det->ficha_tec}}" target="_blank"><button class="btn btn-warning">Ver</button></a></td>
-								<td>{{$det->precio}}</td>
-								<td>{{$det->cantidad*$det->precio}}</td>
+								<td>${{$det->precio}}</td>
+								<td>${{$det->cantidad*$det->precio}}</td>
 							</tr>
 							@endforeach
 						</tbody>	

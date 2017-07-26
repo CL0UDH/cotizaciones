@@ -7,11 +7,8 @@
             Productos
         </h1>
         <ol class="breadcrumb">
-            <li>
-                <i class="fa fa-dashboard"></i>  <a href="#">Inicio</a>
-            </li>
             <li class="active">
-                <i class="fa fa-file"></i> <a href="{{url('clientes')}}">Clientes</a>
+                <i class="glyphicon fa-fw glyphicon-user"></i> <a href="{{url('clientes')}}">Clientes</a>
             </li>
             <li class="active">
                 <i class="fa fa-file"></i> Editar cliente

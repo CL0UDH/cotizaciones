@@ -1,5 +1,22 @@
 @extends ('layouts.admin')
 @section ('contenido')
+<!-- Page Heading -->
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">
+            Cotizaciones
+        </h1>
+        <ol class="breadcrumb">
+            <li class="active">
+                <i class="glyphicon fa-fw glyphicon-folder-open"></i>  <a href="{{url('cotizaciones')}}"> Cotizaciones</a>
+            </li>
+            <li class="active">
+                <i class="fa fa-file"></i> Nueva cotización
+            </li>
+        </ol>
+    </div>
+</div>
+<!-- /.row -->
 <div class="row">
 	<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
 		<h3>Nueva cotización</h3>
