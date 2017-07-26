@@ -22,4 +22,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('productos','ProductoController');
 Route::resource('clientes','ClienteController');
 Route::resource('cotizaciones','CotizacionController');
+Route::resource('pdf', 'PdfController');
+
 

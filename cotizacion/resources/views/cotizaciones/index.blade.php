@@ -44,6 +44,7 @@
 					<td>{{$cot->estado}}</td>
 					<td>
 						<a href="{{URL::action('CotizacionController@show',$cot->idcotizacion)}}"><button class="btn btn-primary">Detalles</button></a>
+						<a href="{{URL::action('PdfController@show',$cot->idcotizacion)}}" target="_blank"><button class="btn btn-warning">PDF</button></a>
 						<a href="" data-target="#modal-delete-{{$cot->idcotizacion}}" data-toggle="modal"><button class="btn btn-danger">Anular</button></a>
 					</td>
 				</tr>

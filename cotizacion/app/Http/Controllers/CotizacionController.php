@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\Input;
 use App\Http\Requests\CotizacionFormRequest;
 use DB;
 use Storage;
+use PDF;
 
 use Carbon\Carbon;
 use Response;
@@ -99,10 +100,13 @@ class CotizacionController extends Controller
         return view("cotizaciones.show",["cotizacion"=>$cotizacion,"detalles"=>$detalles]);
     }
 
+    
+
     public function destroy($id){
         $cotizacion= Cotizacion::findOrFail($id);
         $cotizacion->estado='Descartada';
         $cotizacion->update();
         return Redirect::to('cotizaciones');
     }
+
 }
